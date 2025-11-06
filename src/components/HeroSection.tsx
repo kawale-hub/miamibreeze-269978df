@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-import heroImage from "@/assets/hero-player.jpg";
+import heroImage from "@/assets/arena-background.png";
 
 const HeroSection = () => {
   return (
@@ -8,8 +8,8 @@ const HeroSection = () => {
       <div className="absolute inset-0">
         <img 
           src={heroImage} 
-          alt="WNBA player in action"
-          className="w-full h-full object-cover opacity-40"
+          alt="WNBA game action"
+          className="w-full h-full object-cover opacity-50"
         />
         <div className="absolute inset-0 hero-gradient"></div>
       </div>
