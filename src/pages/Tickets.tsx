@@ -69,7 +69,7 @@ const Tickets = () => {
               Get Your <span className="text-gradient">Tickets</span>
             </h1>
             <p className="text-xl text-primary-foreground/90 mb-8">
-              Experience the thrill of live professional basketball. Choose the perfect ticket package for you.
+              Experience the thrill of live Miami Breeze basketball. Choose the perfect ticket package for you.
             </p>
           </div>
         </div>

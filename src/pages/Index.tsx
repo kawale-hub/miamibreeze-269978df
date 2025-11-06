@@ -57,7 +57,7 @@ const Index = () => {
             Stay In The Loop
           </h2>
           <p className="text-primary-foreground/80 mb-8 max-w-2xl mx-auto">
-            Get the latest news, exclusive content, and special offers delivered straight to your inbox
+            Get the latest Miami Breeze news, exclusive content, and special offers delivered straight to your inbox
           </p>
           <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
             <input 
@@ -111,7 +111,7 @@ const Index = () => {
           </div>
           <div className="border-t border-primary-foreground/10 pt-8 text-center">
             <p className="text-primary-foreground/60 text-sm">
-              © 2025 Phoenix WNBA. All rights reserved. | Privacy Policy | Terms of Service
+              © 2025 Miami Breeze WNBA. All rights reserved. | Privacy Policy | Terms of Service
             </p>
           </div>
         </div>

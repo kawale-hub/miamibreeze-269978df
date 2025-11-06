@@ -27,7 +27,7 @@ const Team = () => {
             Meet The <span className="text-gradient">Team</span>
           </h1>
           <p className="text-xl text-primary-foreground/90">
-            Get to know our incredible roster of talented athletes
+            Get to know the incredible Miami Breeze roster of talented athletes
           </p>
         </div>
       </section>
