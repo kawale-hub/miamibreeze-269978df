@@ -9,9 +9,9 @@ const HeroSection = () => {
         <img 
           src={heroImage} 
           alt="WNBA game action"
-          className="w-full h-full object-cover opacity-50"
+          className="w-full h-full object-cover opacity-80"
         />
-        <div className="absolute inset-0 hero-gradient"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/80 via-primary/40 to-transparent"></div>
       </div>
       
       <div className="container mx-auto px-4 py-20 relative z-10">
