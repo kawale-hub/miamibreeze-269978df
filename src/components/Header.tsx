@@ -22,7 +22,7 @@ const Header = () => {
             <img 
               src={logo} 
               alt="Miami Breeze Logo" 
-              className="h-16 w-auto"
+              className="h-20 w-auto"
             />
           </Link>
 

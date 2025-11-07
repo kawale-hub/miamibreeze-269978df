@@ -1,7 +1,7 @@
 import Header from "@/components/Header";
 import { Button } from "@/components/ui/button";
 import { Heart, Users, Award } from "lucide-react";
-import academyImage from "@/assets/academy.jpg";
+import playersWithKidsImage from "@/assets/players-with-kids.jpg";
 
 const Community = () => {
   const programs = [
@@ -29,11 +29,11 @@ const Community = () => {
       <section className="relative bg-primary py-20">
         <div className="absolute inset-0">
           <img 
-            src={academyImage} 
-            alt="Youth basketball"
-            className="w-full h-full object-cover opacity-30"
+            src={playersWithKidsImage} 
+            alt="Miami Breeze players with youth"
+            className="w-full h-full object-cover opacity-50"
           />
-          <div className="absolute inset-0 hero-gradient"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/70 to-primary/90"></div>
         </div>
         
         <div className="container mx-auto px-4 relative z-10">

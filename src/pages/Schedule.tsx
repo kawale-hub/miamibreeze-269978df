@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import { Button } from "@/components/ui/button";
 import { Calendar, MapPin } from "lucide-react";
+import teamPlayingImage from "@/assets/team-playing-kaseya.png";
 
 const Schedule = () => {
   const games = [
@@ -16,8 +17,17 @@ const Schedule = () => {
     <div className="min-h-screen bg-background">
       <Header />
       
-      <section className="bg-primary py-20">
-        <div className="container mx-auto px-4">
+      <section className="relative bg-primary py-20">
+        <div className="absolute inset-0">
+          <img 
+            src={teamPlayingImage} 
+            alt="Miami Breeze game at Kaseya Center"
+            className="w-full h-full object-cover opacity-40"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/60 to-transparent"></div>
+        </div>
+        
+        <div className="container mx-auto px-4 relative z-10">
           <h1 className="text-5xl md:text-6xl font-bold text-primary-foreground mb-4">
             Game <span className="text-gradient">Schedule</span>
           </h1>

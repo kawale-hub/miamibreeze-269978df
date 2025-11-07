@@ -17,16 +17,16 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 210 24% 16%;
 
-    --primary: 210 100% 12%;
+    --primary: 180 70% 25%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 210 50% 96%;
-    --secondary-foreground: 210 100% 12%;
+    --secondary: 180 50% 96%;
+    --secondary-foreground: 180 70% 25%;
 
-    --muted: 210 40% 96.1%;
+    --muted: 180 40% 96.1%;
     --muted-foreground: 215 16% 47%;
 
-    --accent: 16 100% 60%;
+    --accent: 25 100% 55%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
@@ -39,50 +39,50 @@ All colors MUST be HSL.
     --radius: 0.5rem;
 
     /* Sports theme colors */
-    --team-primary: 210 100% 12%;
-    --team-accent: 16 100% 60%;
-    --hero-overlay: 210 100% 8%;
+    --team-primary: 180 70% 25%;
+    --team-accent: 25 100% 55%;
+    --hero-overlay: 180 60% 15%;
     
     /* Gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(210 100% 8% / 0.95), hsl(210 100% 12% / 0.85));
-    --gradient-card: linear-gradient(180deg, transparent, hsl(210 100% 8% / 0.6));
+    --gradient-hero: linear-gradient(135deg, hsl(180 60% 15% / 0.95), hsl(180 70% 25% / 0.85));
+    --gradient-card: linear-gradient(180deg, transparent, hsl(180 60% 15% / 0.6));
     
     /* Shadows */
-    --shadow-glow: 0 0 40px hsl(16 100% 60% / 0.3);
-    --shadow-card: 0 10px 40px hsl(210 100% 8% / 0.4);
+    --shadow-glow: 0 0 40px hsl(25 100% 55% / 0.3);
+    --shadow-card: 0 10px 40px hsl(180 60% 15% / 0.4);
     
     /* Transitions */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   .dark {
-    --background: 210 100% 8%;
+    --background: 180 60% 8%;
     --foreground: 0 0% 100%;
 
-    --card: 210 100% 10%;
+    --card: 180 60% 10%;
     --card-foreground: 0 0% 100%;
 
-    --popover: 210 100% 10%;
+    --popover: 180 60% 10%;
     --popover-foreground: 0 0% 100%;
 
     --primary: 0 0% 100%;
-    --primary-foreground: 210 100% 12%;
+    --primary-foreground: 180 70% 25%;
 
-    --secondary: 210 50% 20%;
+    --secondary: 180 50% 20%;
     --secondary-foreground: 0 0% 100%;
 
-    --muted: 210 50% 20%;
+    --muted: 180 50% 20%;
     --muted-foreground: 215 20% 65%;
 
-    --accent: 16 100% 60%;
+    --accent: 25 100% 55%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 63% 31%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 210 50% 20%;
-    --input: 210 50% 20%;
-    --ring: 16 100% 60%;
+    --border: 180 50% 20%;
+    --input: 180 50% 20%;
+    --ring: 25 100% 55%;
   }
 }
 
@@ -102,7 +102,7 @@ All colors MUST be HSL.
 
 @layer utilities {
   .text-gradient {
-    @apply bg-gradient-to-r from-accent to-orange-400 bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-[hsl(180,80%,50%)] to-accent bg-clip-text text-transparent;
   }
   
   .hero-gradient {

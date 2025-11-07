@@ -1,6 +1,14 @@
 import Header from "@/components/Header";
 import { Button } from "@/components/ui/button";
-import shopImage from "@/assets/shop.jpg";
+import jerseysRackImage from "@/assets/jerseys-rack.jpg";
+import jerseyHomeImage from "@/assets/jersey-home.png";
+import jerseyAwayImage from "@/assets/jersey-away.png";
+import hispanicHeritageJerseyImage from "@/assets/hispanic-heritage-jersey.png";
+import hoodieImage from "@/assets/hoodie.png";
+import capImage from "@/assets/cap.png";
+import shortsImage from "@/assets/shorts.png";
+import backpackImage from "@/assets/backpack.png";
+import classicTeeImage from "@/assets/classic-tee.png";
 
 const Shop = () => {
   const categories = [
@@ -11,12 +19,14 @@ const Shop = () => {
   ];
 
   const featuredProducts = [
-    { name: "Home Jersey", price: "$85", category: "Jerseys" },
-    { name: "Away Jersey", price: "$85", category: "Jerseys" },
-    { name: "Team Hoodie", price: "$65", category: "Apparel" },
-    { name: "Team Cap", price: "$30", category: "Accessories" },
-    { name: "Practice Shorts", price: "$45", category: "Apparel" },
-    { name: "Team Backpack", price: "$55", category: "Accessories" }
+    { name: "Home Jersey", price: "$85", category: "Jerseys", image: jerseyHomeImage },
+    { name: "Away Jersey", price: "$85", category: "Jerseys", image: jerseyAwayImage },
+    { name: "Hispanic Heritage Jersey", price: "$95", category: "Jerseys", image: hispanicHeritageJerseyImage },
+    { name: "Team Hoodie", price: "$65", category: "Apparel", image: hoodieImage },
+    { name: "Team Cap", price: "$30", category: "Accessories", image: capImage },
+    { name: "Practice Shorts", price: "$45", category: "Apparel", image: shortsImage },
+    { name: "Team Backpack", price: "$55", category: "Accessories", image: backpackImage },
+    { name: "Classic Tee", price: "$35", category: "Apparel", image: classicTeeImage }
   ];
 
   return (
@@ -26,8 +36,8 @@ const Shop = () => {
       <section className="relative bg-primary py-20">
         <div className="absolute inset-0">
           <img 
-            src={shopImage} 
-            alt="Team merchandise"
+            src={jerseysRackImage} 
+            alt="Miami Breeze merchandise"
             className="w-full h-full object-cover opacity-30"
           />
           <div className="absolute inset-0 hero-gradient"></div>
@@ -60,10 +70,16 @@ const Shop = () => {
 
           {/* Featured Products */}
           <h2 className="text-3xl font-bold mb-8">Featured Products</h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {featuredProducts.map((product, index) => (
               <div key={index} className="bg-card border border-border rounded-lg overflow-hidden hover:shadow-lg transition-shadow">
-                <div className="aspect-square bg-secondary"></div>
+                <div className="aspect-square bg-secondary relative overflow-hidden">
+                  <img 
+                    src={product.image} 
+                    alt={product.name}
+                    className="w-full h-full object-contain p-4"
+                  />
+                </div>
                 <div className="p-6">
                   <span className="text-xs text-accent font-semibold">{product.category}</span>
                   <h3 className="text-xl font-bold mb-2 mt-1">{product.name}</h3>

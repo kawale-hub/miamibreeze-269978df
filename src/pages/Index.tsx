@@ -1,23 +1,24 @@
 import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
 import FeatureCard from "@/components/FeatureCard";
-import seasonTicketsImage from "@/assets/season-tickets.jpg";
-import groupExperiencesImage from "@/assets/group-experiences.jpg";
+import kaseyaCenterImage from "@/assets/kaseya-center.jpg";
+import groupJerseysImage from "@/assets/group-jerseys.jpg";
 import academyImage from "@/assets/academy.jpg";
-import shopImage from "@/assets/shop.jpg";
+import jerseysRackImage from "@/assets/jerseys-rack.jpg";
+import instaPageImage from "@/assets/insta-page.png";
 
 const Index = () => {
   const features = [
     {
       title: "Season Tickets",
       description: "2026 Season Ticket Memberships On Sale Now",
-      image: seasonTicketsImage,
+      image: kaseyaCenterImage,
       buttonText: "Join the Family"
     },
     {
       title: "Group Experiences",
       description: "Enjoy Discounted Tickets for Your Squad, Book Your Outing Today",
-      image: groupExperiencesImage,
+      image: groupJerseysImage,
       buttonText: "Plan Your Visit"
     },
     {
@@ -29,7 +30,7 @@ const Index = () => {
     {
       title: "Shop Merch",
       description: "Show your team spirit with official gear and apparel",
-      image: shopImage,
+      image: jerseysRackImage,
       buttonText: "Shop Now"
     }
   ];
@@ -46,6 +47,22 @@ const Index = () => {
             {features.map((feature, index) => (
               <FeatureCard key={index} {...feature} />
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Social Media Section */}
+      <section className="py-20 bg-background">
+        <div className="container mx-auto px-4">
+          <h2 className="text-4xl font-bold text-center mb-12">
+            Follow Us <span className="text-gradient">@miamibreeze</span>
+          </h2>
+          <div className="max-w-5xl mx-auto">
+            <img 
+              src={instaPageImage} 
+              alt="Miami Breeze Instagram Feed"
+              className="w-full rounded-xl shadow-2xl"
+            />
           </div>
         </div>
       </section>
