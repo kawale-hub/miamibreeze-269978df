@@ -22,7 +22,7 @@ const Header = () => {
             <img 
               src={logo} 
               alt="Miami Breeze Logo" 
-              className="h-20 w-auto"
+              className="h-24 w-auto"
             />
           </Link>
 
@@ -43,12 +43,12 @@ const Header = () => {
           <div className="flex items-center gap-3">
             <Link to="/tickets">
               <Button variant="ghost" size="icon" className="text-primary-foreground hover:bg-primary-foreground/10">
-                <Ticket className="h-5 w-5" />
+                <Ticket className="h-6 w-6" />
               </Button>
             </Link>
             <Link to="/shop">
               <Button variant="ghost" size="icon" className="text-primary-foreground hover:bg-primary-foreground/10">
-                <ShoppingBag className="h-5 w-5" />
+                <ShoppingBag className="h-6 w-6" />
               </Button>
             </Link>
             <Button variant="ghost" size="icon" className="lg:hidden text-primary-foreground hover:bg-primary-foreground/10">

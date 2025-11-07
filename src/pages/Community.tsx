@@ -31,9 +31,9 @@ const Community = () => {
           <img 
             src={playersWithKidsImage} 
             alt="Miami Breeze players with youth"
-            className="w-full h-full object-cover opacity-50"
+            className="w-full h-full object-cover opacity-70"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/70 to-primary/90"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-primary/70 via-primary/40 to-primary/70"></div>
         </div>
         
         <div className="container mx-auto px-4 relative z-10">

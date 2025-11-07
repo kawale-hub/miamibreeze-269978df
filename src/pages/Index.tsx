@@ -6,6 +6,7 @@ import groupJerseysImage from "@/assets/group-jerseys.jpg";
 import academyImage from "@/assets/academy.jpg";
 import jerseysRackImage from "@/assets/jerseys-rack.jpg";
 import instaPageImage from "@/assets/insta-page.png";
+import highlightsImage from "@/assets/highlights.png";
 
 const Index = () => {
   const features = [
@@ -40,6 +41,22 @@ const Index = () => {
       <Header />
       <HeroSection />
       
+      {/* Highlights Section */}
+      <section className="py-16 bg-background">
+        <div className="container mx-auto px-4">
+          <h2 className="text-4xl font-bold text-center mb-12">
+            Game <span className="text-gradient">Highlights</span>
+          </h2>
+          <div className="max-w-6xl mx-auto">
+            <img 
+              src={highlightsImage} 
+              alt="Miami Breeze Game Highlights"
+              className="w-full rounded-xl shadow-2xl"
+            />
+          </div>
+        </div>
+      </section>
+
       {/* Features Grid */}
       <section className="py-20 bg-secondary">
         <div className="container mx-auto px-4">

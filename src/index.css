@@ -8,23 +8,23 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 210 24% 16%;
+    --background: 180 60% 8%;
+    --foreground: 0 0% 100%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 210 24% 16%;
+    --card: 180 50% 12%;
+    --card-foreground: 0 0% 100%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 210 24% 16%;
+    --popover: 180 50% 12%;
+    --popover-foreground: 0 0% 100%;
 
-    --primary: 180 70% 25%;
+    --primary: 180 70% 40%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 180 50% 96%;
-    --secondary-foreground: 180 70% 25%;
+    --secondary: 180 50% 15%;
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 180 40% 96.1%;
-    --muted-foreground: 215 16% 47%;
+    --muted: 180 40% 15%;
+    --muted-foreground: 215 20% 70%;
 
     --accent: 25 100% 55%;
     --accent-foreground: 0 0% 100%;
@@ -32,24 +32,25 @@ All colors MUST be HSL.
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 214 32% 91%;
-    --input: 214 32% 91%;
-    --ring: 210 100% 12%;
+    --border: 180 40% 20%;
+    --input: 180 40% 20%;
+    --ring: 25 100% 55%;
 
     --radius: 0.5rem;
 
     /* Sports theme colors */
-    --team-primary: 180 70% 25%;
+    --team-primary: 180 70% 40%;
     --team-accent: 25 100% 55%;
-    --hero-overlay: 180 60% 15%;
+    --hero-overlay: 180 60% 8%;
     
     /* Gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(180 60% 15% / 0.95), hsl(180 70% 25% / 0.85));
-    --gradient-card: linear-gradient(180deg, transparent, hsl(180 60% 15% / 0.6));
+    --gradient-hero: linear-gradient(135deg, hsl(180 60% 8% / 0.95), hsl(180 70% 15% / 0.85));
+    --gradient-card: linear-gradient(180deg, transparent, hsl(180 60% 10% / 0.8));
+    --gradient-dark-overlay: linear-gradient(135deg, hsl(180 60% 8% / 0.7), hsl(180 70% 12% / 0.7));
     
     /* Shadows */
-    --shadow-glow: 0 0 40px hsl(25 100% 55% / 0.3);
-    --shadow-card: 0 10px 40px hsl(180 60% 15% / 0.4);
+    --shadow-glow: 0 0 40px hsl(25 100% 55% / 0.4);
+    --shadow-card: 0 10px 40px hsl(180 60% 5% / 0.6);
     
     /* Transitions */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);

@@ -1,7 +1,7 @@
 import Header from "@/components/Header";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-import teamPlayingImage from "@/assets/team-playing-kaseya.png";
+import newsBackgroundImage from "@/assets/news-background.jpg";
 
 const News = () => {
   const articles = [
@@ -44,11 +44,11 @@ const News = () => {
       <section className="relative bg-primary py-20">
         <div className="absolute inset-0">
           <img 
-            src={teamPlayingImage} 
+            src={newsBackgroundImage} 
             alt="Miami Breeze basketball action"
-            className="w-full h-full object-cover opacity-40"
+            className="w-full h-full object-cover opacity-60"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/60 to-transparent"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-primary/80 via-primary/50 to-primary/80"></div>
         </div>
         
         <div className="container mx-auto px-4 relative z-10">
