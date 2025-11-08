@@ -46,37 +46,37 @@ const News = () => {
           <img 
             src={newsBackgroundImage} 
             alt="Miami Breeze basketball action"
-            className="w-full h-full object-cover opacity-60"
+            className="w-full h-full object-cover opacity-70"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-primary/80 via-primary/50 to-primary/80"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-secondary/70 via-secondary/40 to-secondary/70"></div>
         </div>
         
         <div className="container mx-auto px-4 relative z-10">
-          <h1 className="text-5xl md:text-6xl font-bold text-primary-foreground mb-4">
+          <h1 className="text-5xl md:text-6xl font-heading font-bold text-white mb-4">
             Latest <span className="text-gradient">News</span>
           </h1>
-          <p className="text-xl text-primary-foreground/90">
+          <p className="text-xl font-body text-white/90">
             Stay updated with the latest team news and stories
           </p>
         </div>
       </section>
 
-      <section className="py-20">
+      <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto space-y-8">
             {articles.map((article, index) => (
               <article key={index} className="bg-card border border-border rounded-lg p-8 hover:shadow-lg transition-shadow">
                 <div className="flex items-center gap-3 mb-4">
-                  <span className="px-3 py-1 bg-accent/10 text-accent rounded-full text-xs font-semibold">
+                  <span className="px-3 py-1 bg-accent/10 text-accent rounded-full text-xs font-bold font-body">
                     {article.category}
                   </span>
-                  <span className="text-sm text-muted-foreground">{article.date}</span>
+                  <span className="text-sm font-body text-muted-foreground">{article.date}</span>
                 </div>
-                <h2 className="text-3xl font-bold mb-4">{article.title}</h2>
-                <p className="text-muted-foreground mb-6 leading-relaxed">
+                <h2 className="text-3xl font-heading font-bold mb-4 text-secondary">{article.title}</h2>
+                <p className="text-muted-foreground font-body mb-6 leading-relaxed">
                   {article.excerpt}
                 </p>
-                <Button variant="outline" className="group">
+                <Button variant="outline" className="group font-body">
                   Read Full Story
                   <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
                 </Button>

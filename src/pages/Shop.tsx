@@ -41,22 +41,22 @@ const Shop = () => {
           <img 
             src={jerseysRackImage} 
             alt="Miami Breeze merchandise"
-            className="w-full h-full object-cover opacity-60"
+            className="w-full h-full object-cover opacity-70"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-primary/80 via-primary/50 to-primary/80"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-secondary/70 via-secondary/40 to-secondary/70"></div>
         </div>
         
         <div className="container mx-auto px-4 relative z-10">
-          <h1 className="text-5xl md:text-6xl font-bold text-primary-foreground mb-4">
+          <h1 className="text-5xl md:text-6xl font-heading font-bold text-white mb-4">
             Official <span className="text-gradient">Merchandise</span>
           </h1>
-          <p className="text-xl text-primary-foreground/90">
+          <p className="text-xl font-body text-white/90">
             Show your team pride with official gear
           </p>
         </div>
       </section>
 
-      <section className="py-20">
+      <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
           {/* Categories */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-16">
@@ -65,7 +65,7 @@ const Shop = () => {
                 key={index}
                 className="bg-card border border-border rounded-lg overflow-hidden hover:shadow-lg transition-shadow group"
               >
-                <div className="aspect-square bg-secondary relative overflow-hidden">
+                <div className="aspect-square bg-muted relative overflow-hidden">
                   <img 
                     src={category.image} 
                     alt={category.name}
@@ -73,19 +73,19 @@ const Shop = () => {
                   />
                 </div>
                 <div className="p-4 text-center">
-                  <h3 className="text-xl font-bold mb-1">{category.name}</h3>
-                  <p className="text-sm text-muted-foreground">{category.items}</p>
+                  <h3 className="text-xl font-heading font-bold mb-1 text-secondary">{category.name}</h3>
+                  <p className="text-sm font-body text-muted-foreground">{category.items}</p>
                 </div>
               </button>
             ))}
           </div>
 
           {/* Featured Products */}
-          <h2 className="text-3xl font-bold mb-8">Featured Products</h2>
+          <h2 className="text-3xl font-heading font-bold mb-8 text-secondary">Featured Products</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {featuredProducts.map((product, index) => (
               <div key={index} className="bg-card border border-border rounded-lg overflow-hidden hover:shadow-lg transition-shadow">
-                <div className="aspect-square bg-secondary relative overflow-hidden">
+                <div className="aspect-square bg-muted relative overflow-hidden">
                   <img 
                     src={product.image} 
                     alt={product.name}
@@ -93,11 +93,11 @@ const Shop = () => {
                   />
                 </div>
                 <div className="p-6">
-                  <span className="text-xs text-accent font-semibold">{product.category}</span>
-                  <h3 className="text-xl font-bold mb-2 mt-1">{product.name}</h3>
+                  <span className="text-xs font-body text-accent font-semibold">{product.category}</span>
+                  <h3 className="text-xl font-heading font-bold mb-2 mt-1 text-secondary">{product.name}</h3>
                   <div className="flex items-center justify-between">
-                    <span className="text-2xl font-bold">{product.price}</span>
-                    <Button className="bg-accent hover:bg-accent/90">
+                    <span className="text-2xl font-heading font-bold text-secondary">{product.price}</span>
+                    <Button className="bg-accent hover:bg-accent/90 font-body font-semibold">
                       Add to Cart
                     </Button>
                   </div>

@@ -1,70 +1,88 @@
 import Header from "@/components/Header";
 import { Button } from "@/components/ui/button";
 import { Calendar, MapPin } from "lucide-react";
+import { Link } from "react-router-dom";
 import scheduleHeaderImage from "@/assets/schedule-header.png";
 
 const Schedule = () => {
   const games = [
-    { date: "Jun 15, 2026", time: "7:00 PM", opponent: "vs Las Vegas Aces", venue: "Home Arena", status: "Upcoming" },
-    { date: "Jun 18, 2026", time: "6:30 PM", opponent: "@ Seattle Storm", venue: "Climate Pledge Arena", status: "Upcoming" },
-    { date: "Jun 22, 2026", time: "7:00 PM", opponent: "vs New York Liberty", venue: "Home Arena", status: "Upcoming" },
-    { date: "Jun 25, 2026", time: "8:00 PM", opponent: "@ Chicago Sky", venue: "Wintrust Arena", status: "Upcoming" },
-    { date: "Jun 29, 2026", time: "7:00 PM", opponent: "vs Dallas Wings", venue: "Home Arena", status: "Upcoming" },
-    { date: "Jul 2, 2026", time: "7:30 PM", opponent: "vs Minnesota Lynx", venue: "Home Arena", status: "Upcoming" }
+    { date: "Dec 3, 2025", opponent: "Las Vegas Aces", time: "7:00 PM", location: "Home", result: "-" },
+    { date: "Dec 6, 2025", opponent: "Phoenix Mercury", time: "7:30 PM", location: "Away", result: "-" },
+    { date: "Dec 10, 2025", opponent: "Seattle Storm", time: "8:00 PM", location: "Home", result: "-" },
+    { date: "Dec 13, 2025", opponent: "Minnesota Lynx", time: "6:00 PM", location: "Away", result: "-" },
+    { date: "Dec 17, 2025", opponent: "Chicago Sky", time: "7:00 PM", location: "Home", result: "-" },
+    { date: "Dec 20, 2025", opponent: "New York Liberty", time: "7:30 PM", location: "Away", result: "-" },
+    { date: "Dec 23, 2025", opponent: "Los Angeles Sparks", time: "8:00 PM", location: "Home", result: "-" },
+    { date: "Dec 27, 2025", opponent: "Connecticut Sun", time: "7:00 PM", location: "Home", result: "-" },
   ];
 
   return (
     <div className="min-h-screen bg-background">
       <Header />
       
-      <section className="relative bg-primary py-20">
-        <div className="absolute inset-0">
-          <img 
-            src={scheduleHeaderImage} 
-            alt="Miami Breeze game at arena"
-            className="w-full h-full object-cover opacity-60"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-primary/80 via-primary/50 to-primary/80"></div>
+      {/* Hero Section */}
+      <section className="relative h-[400px] flex items-center justify-center overflow-hidden">
+        <div 
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ 
+            backgroundImage: `url(${scheduleHeaderImage})`,
+          }}
+        >
+          <div className="absolute inset-0 bg-gradient-to-r from-secondary/60 to-secondary/40"></div>
         </div>
-        
-        <div className="container mx-auto px-4 relative z-10">
-          <h1 className="text-5xl md:text-6xl font-bold text-primary-foreground mb-4">
-            Game <span className="text-gradient">Schedule</span>
+        <div className="relative z-10 text-center px-4">
+          <h1 className="text-6xl font-heading font-bold text-white mb-4">
+            Game Schedule
           </h1>
-          <p className="text-xl text-primary-foreground/90">
-            Don't miss a single moment of the action
+          <p className="text-xl font-body text-white/90 max-w-2xl mx-auto">
+            Don't miss a single game this season
           </p>
         </div>
       </section>
 
-      <section className="py-20">
+      {/* Schedule Grid */}
+      <section className="py-20 bg-background">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto space-y-4">
-            {games.map((game, index) => (
-              <div key={index} className="bg-card border border-border rounded-lg p-6 hover:shadow-lg transition-all duration-300">
-                <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
-                  <div className="flex-1">
-                    <div className="flex items-center gap-2 text-sm text-muted-foreground mb-2">
-                      <Calendar className="h-4 w-4" />
-                      <span>{game.date} • {game.time}</span>
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-4xl font-heading font-bold text-center mb-12 text-secondary">
+              Upcoming <span className="text-gradient">Games</span>
+            </h2>
+
+            <div className="space-y-4">
+              {games.map((game, index) => (
+                <div 
+                  key={index}
+                  className="bg-card rounded-lg p-6 shadow-md hover:shadow-xl transition-all duration-300 border border-border hover:border-primary"
+                >
+                  <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+                    <div className="flex-1">
+                      <div className="flex items-center gap-3 mb-2">
+                        <span className="text-sm font-semibold font-body text-accent px-3 py-1 bg-accent/10 rounded-full">
+                          {game.location}
+                        </span>
+                        <span className="text-sm font-body text-muted-foreground">{game.date}</span>
+                      </div>
+                      <h3 className="text-2xl font-heading font-bold text-secondary mb-1">
+                        vs {game.opponent}
+                      </h3>
+                      <p className="text-muted-foreground font-body">{game.time}</p>
                     </div>
-                    <h3 className="text-2xl font-bold mb-2">{game.opponent}</h3>
-                    <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                      <MapPin className="h-4 w-4" />
-                      <span>{game.venue}</span>
+                    <div className="flex items-center gap-4">
+                      {game.result !== "-" && (
+                        <span className="text-lg font-bold font-body text-primary">
+                          {game.result}
+                        </span>
+                      )}
+                      <Link to="/tickets">
+                        <Button className="bg-accent hover:bg-accent/90 font-body font-semibold">
+                          Buy Tickets
+                        </Button>
+                      </Link>
                     </div>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <span className="px-4 py-2 bg-accent/10 text-accent rounded-full text-sm font-semibold">
-                      {game.status}
-                    </span>
-                    <Button className="bg-accent hover:bg-accent/90">
-                      Get Tickets
-                    </Button>
                   </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       </section>
