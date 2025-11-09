@@ -23,10 +23,10 @@ const FeatureCard = ({ title, description, image, buttonText, link }: FeatureCar
       </div>
       
       <div className="absolute inset-0 flex flex-col justify-end p-8">
-        <h3 className="text-3xl font-heading font-bold text-primary-foreground mb-3 transform transition-transform duration-300 group-hover:translate-y-[-4px]">
+        <h3 className="text-3xl font-heading font-bold text-primary-foreground mb-3 transform transition-transform duration-300 group-hover:translate-y-[-4px] leading-tight">
           {title}
         </h3>
-        <p className="text-primary-foreground/90 mb-6 text-sm font-body">
+        <p className="text-primary-foreground/90 mb-6 text-sm font-body leading-relaxed">
           {description}
         </p>
         <Button 
