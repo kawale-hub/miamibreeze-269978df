@@ -30,7 +30,7 @@ const FeatureCard = ({ title, description, image, buttonText, link }: FeatureCar
           {description}
         </p>
         <Button 
-          className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold w-full group/btn font-body justify-start"
+          className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold group/btn font-body self-start"
         >
           {buttonText}
           <ArrowRight className="ml-2 h-4 w-4 group-hover/btn:translate-x-1 transition-transform" />
