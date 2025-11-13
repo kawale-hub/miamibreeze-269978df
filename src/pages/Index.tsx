@@ -64,7 +64,7 @@ const Index = () => {
       {/* Features Grid */}
       <section className="py-20 bg-muted">
         <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 items-stretch">
             {features.map((feature, index) => (
               <FeatureCard key={index} {...feature} />
             ))}
